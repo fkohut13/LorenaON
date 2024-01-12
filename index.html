@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -60,27 +61,6 @@
         </div>
     </div>
 
-    <!-- Java Script Code-->
-    <script>
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const closeBtn = document.querySelector('.closebtn');
-            const openBtn = document.querySelector('.threebar-icon');
-
-            closeBtn.addEventListener('click', closeSidebar);
-            openBtn.addEventListener('click', showSidebar);
-        });
-
-        function showSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.style.left = '0px';
-        }
-
-        function closeSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.style.left = '-250px';
-        }
-    </script>
 </body>
 
 </html>
