@@ -1,0 +1,235 @@
+/* Global atributes!*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #161A1D;
+    min-height: 100vh;
+    background-image: url(./assets/images/Onlorena.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+li,
+a,
+h1 {
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    z-index: 100;
+    padding: 1.3rem 10%;
+    background: rgba(22, 26, 29, 0.8);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(3px);
+
+}
+
+.navbar a {
+    font-size: 1.15rem;
+    margin-left: 2.5rem;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a {
+    transition: all 0.3s ease 0s;
+}
+
+.navbar ul li a:hover {
+    transition: all 0.3s ease 0s;
+    color: royalblue;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: -250px;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    background: rgba(22, 26, 29, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    transition: all 0.7s ease;
+}
+.sidebar ul {
+    margin: 1em 0 0 1em;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar li {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.sidebar a {
+    width: 100%;
+    display: block;
+    font-size: 1.5rem;
+}
+
+.sidebar .closebtn i {
+    font-size: 1.7rem;
+    float: right;
+    margin-right: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.sidebar .closebtn i:hover{
+    color: red;
+}
+
+.sidebar a {
+    margin-top: 1em;
+}
+
+.sidebar ul li a:hover {
+    transition: all 0.3s ease 0s;
+    color: royalblue;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+    color: white;
+    font-size: 30px;
+}
+
+.logo:hover {
+    transition: all 0.3s ease 0s;
+    color: royalblue;
+}
+
+.introduction-text h1 {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.introduction-text {
+    display: block;
+    align-items: center;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+#vid {
+    position: absolute;
+    margin-top: 20px;
+}
+
+.meet-btn a {
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 1px solid royalblue;
+    margin-top: 40px;
+    border-radius: 32px;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, .40);
+    width: fit-content;
+}
+
+.threebar-icon {
+    display: none;
+    right: 5%;
+    font-size: 1.7rem;
+}
+.threebar-icon:hover {
+    color: royalblue;
+}
+
+@media (max-width: 992px) {
+    .header {
+        padding: 1.3rem 5%;
+    }
+
+    .navbar a {
+        margin-left: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .threebar-icon {
+        display: inline-flex;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+    }
+
+    .navbar a {
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+
+    .navbar .navbar-menu-items {
+        display: none;
+    }
+
+    .navbar ul {
+        display: block;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        left: 1;
+        opacity: 0;
+    }
+}
