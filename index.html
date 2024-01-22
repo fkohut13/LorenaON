@@ -5,7 +5,7 @@
     <!--Meta and other important imports!-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lorena On</title>
+    <title>Lorena ON</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,51 +16,120 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
     <script src="index.js"></script>
 </head>
 
 <body>
-    <header class="header">
-        <!--Logo of webpage-->
-        <a class="logo" href="./index.html">Lorena
-            <svg id="logo" xmlns="http://www.w3.org/2000/svg" width="60" height="100" viewBox="0 0 24 24">
-                <g fill="none" stroke="royalblue" stroke-width="1.5">
-                    <path d="M1 15V9a6 6 0 0 1 6-6h10a6 6 0 0 1 6 6v6a6 6 0 0 1-6 6H7a6 6 0 0 1-6-6Z" />
-                    <path d="M9 9a3 3 0 1 1 0 6a3 3 0 0 1 0-6Z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 15V9l4 6V9" />
-                </g>
-            </svg>
-        </a>
-        <!--Close button-->
-        <a class="threebar-icon" onclick=showSidebar() href="#"><i class="fa-solid fa-bars"></i></a>
-        <nav class="navbar">
-            <!--Unordered list with items of the navbar, such as: home, realstate, about us, contact and svgs-->
-            <ul class="navbar-menu-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Imóveis</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="sidebar">
-            <a class="closebtn" onclick=closeSidebar()><i class="fa-solid fa-x"></i></a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Imóveis</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </div>
-    </header>
-    <!--Introduction text and "meet us" button-->
-    <div class="introduction-text">
-        <h1>LORENA ON</h1>
-        <p>Conforto que cabe no seu bolso</p>
-        <div class="meet-btn">
-            <a href="#">VENHA CONHECER</a>
-        </div>
-    </div>
+    <!--Main content of the page-->
+    <div class="main-content">
+        <header class="header">
+            <!--Logo of webpage-->
+            <div class="logo-container">
+                <a class="logo" href="./index.html">
+                    <div class="logo">
+                        <div class="letter">LORENA</div>
+                        <div class="box">
+                            <div class="on">ON</div>
+                        </div>
 
+                    </div>
+                </a>
+            </div>
+
+            <!--Open threebar button-->
+            <a class="threebar-icon" onclick=showSidebar() href="#"><i class="fa-solid fa-bars"></i></a>
+            <nav class="navbar">
+                <!--Unordered list with items of the navbar, such as: home, realstate, about us, contact and svgs-->
+                <ul class="navbar-menu-items">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Imóveis</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            <!--Responsive sidebar-->
+            <div class="sidebar">
+                <!--Close button-->
+                <a class="closebtn" onclick=closeSidebar()><i class="fa-solid fa-x"></i></a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Imóveis</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </header>
+        <!--Introduction text and "meet us" button-->
+        <div class="introduction-text">
+            <h1>LORENA ON</h1>
+            <p id="slogan">Aluguel por temporada sempre ON</p>
+            <div class="meet-btn" onclick="scrollmeetbtn('container')">
+                <a href="#">VENHA CONHECER</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="img-slider">
+        <div class="slide fade">
+            <div class="img-container">
+                <div class="numbertext">1 / 3</div>
+                <img src="./assets/images/Pool.jpg" alt="">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+            </div>
+            <div class="info-text">
+                <h2>Piscina</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris sed nisl at sem malesuada ultricies. Suspendisse
+                    potenti. Vestibulum ante ipsum primis in faucibus or
+                </p>
+            </div>
+            
+        </div>
+        <div class="slide fade">
+            <div class="img-container">
+                <div class="numbertext">2 / 3</div>
+                <img src="./assets/images/Gym.jpg" alt="">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+            </div>
+            <div class="info-text">
+                <h2>Academia</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris sed nisl at sem malesuada ultricies. Suspendisse
+                    potenti. Vestibulum ante ipsum primis in faucibus or
+                </p>
+            </div>
+           
+        </div>
+        <div class="slide fade">
+            <div class="img-container">
+                <div class="numbertext">3 / 3</div>
+                <img src="./assets/images/Publicroom.jpg" alt="">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="info-text">
+                <h2>Quarto</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris sed nisl at sem malesuada ultricies. Suspendisse
+                    potenti. Vestibulum ante ipsum primis in faucibus or
+                </p>
+            </div>
+           
+        </div>
+        
+    </div>
+    <br>
+    
 </body>
 
 </html>
