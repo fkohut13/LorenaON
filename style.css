@@ -1,4 +1,4 @@
-/* Global atributes!*/
+/* Global Styles!*/
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +6,10 @@
 
 }
 
-body {
-    background-color: #161A1D;
-    min-height: 100vh;
-    background-image: url(./assets/images/Onlorena.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
 li,
 a,
-h1 {
+h1,
+p {
     font-family: 'Raleway', sans-serif;
     color: #ffffff;
     font-size: 16px;
@@ -26,6 +18,26 @@ h1 {
 
 }
 
+hr {
+    z-index: 995;
+    position: sticky;
+    width: 35px;
+
+}
+
+/*Background image*/
+.main-content {
+    background-color: #00000037;
+    min-height: 100vh;
+    background-image: url(./assets/images/LorenaOn.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+
+}
+
+/*Header styles*/
 .header {
     position: fixed;
     top: 0;
@@ -43,6 +55,7 @@ h1 {
 
 }
 
+/*Navigation bar styles*/
 .navbar a {
     font-size: 1.15rem;
     margin-left: 2.5rem;
@@ -62,6 +75,7 @@ h1 {
     color: royalblue;
 }
 
+/*Sidebar styles*/
 .sidebar {
     position: fixed;
     top: 0;
@@ -79,6 +93,7 @@ h1 {
     overflow: hidden;
     transition: all 0.7s ease;
 }
+
 .sidebar ul {
     margin: 1em 0 0 1em;
     width: 50%;
@@ -90,6 +105,7 @@ h1 {
     width: 100%;
     margin-bottom: 3rem;
 }
+
 .sidebar a {
     width: 100%;
     display: block;
@@ -103,7 +119,8 @@ h1 {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.sidebar .closebtn i:hover{
+
+.sidebar .closebtn i:hover {
     color: red;
 }
 
@@ -116,19 +133,48 @@ h1 {
     color: royalblue;
 }
 
+/*Three bar icon that shows sidebar*/
+.threebar-icon {
+    display: none;
+    right: 5%;
+    font-size: 1.7rem;
+}
+
+.threebar-icon:hover {
+    color: royalblue;
+}
+
+/*Logo styles*/
 .logo {
     display: flex;
     align-items: center;
     transition: all 0.3s ease 0s;
     color: white;
-    font-size: 30px;
+    font-size: 40px;
+    flex-direction: column;
+    font-family: 'Teko', sans-serif;
+
 }
 
-.logo:hover {
-    transition: all 0.3s ease 0s;
-    color: royalblue;
+.on {
+    font-size: 15px;
+    color: black;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
 }
 
+.box {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.6rem;
+    height: 0.9rem;
+    letter-spacing: -1px;
+    margin-top: -16px;
+}
+
+/*Introduction Text in front of background image*/
 .introduction-text h1 {
     font-size: 40px;
     color: white;
@@ -148,45 +194,146 @@ h1 {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 
-
 }
 
-p {
+.introduction-text h1 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+#slogan {
     font-family: 'Raleway', sans-serif;
     color: white;
     font-weight: 400;
     text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    border-radius: 30px;
+
 }
 
-
-#vid {
-    position: absolute;
-    margin-top: 20px;
-}
-
+/*Meet button that scrolls into element*/
 .meet-btn a {
     position: relative;
-    color: white;
+    color: #f4efeb;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    border: 1px solid royalblue;
     margin-top: 40px;
     border-radius: 32px;
     padding: 15px 30px;
-    background-color: rgba(0, 0, 0, .40);
+    background: rgba(155, 155, 155, .49);
     width: fit-content;
+    font-weight: 550;
+    transition: all 0.3s ease 0s;
 }
 
-.threebar-icon {
+.meet-btn a:hover {
+    background-color: rgba(93, 114, 179, 0.951);
+    color: white;
+
+}
+
+
+/*Images slider*/
+.img-slider {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: auto;
+    
+}
+
+.slide {
+    display: flex;
+    flex-direction: row;
     display: none;
-    right: 5%;
-    font-size: 1.7rem;
+    position: relative;
+    
 }
-.threebar-icon:hover {
-    color: royalblue;
+
+.info-text {
+    order: 1;
+    padding: 0 20px;
+    flex: 0 0 50%;
 }
+
+.info-text h2 {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.info-text p {
+    color: black;
+    margin-top: 30px;
+    font-size: 1.6em;
+}
+
+.img-container {
+    flex: 0 0 50%;
+    width: 50%;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 50%;
+  }
+.prev {
+    left: 0;
+}
+  
+  /* On hover black background color*/
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+   
+  }
+  .slide.fade:first-child {
+    display: flex;
+    opacity: 1;
+  }
+  .slide.fade.active-slide {
+    opacity: 1;
+    width: 100%;
+  }
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
 
 @media (max-width: 992px) {
     .header {
@@ -197,6 +344,7 @@ p {
         margin-left: 1.5rem;
     }
 }
+
 
 @media (max-width: 768px) {
     .threebar-icon {
@@ -210,6 +358,12 @@ p {
         width: 100%;
 
     }
+    .next {
+        right:0%;
+      }
+      .next, .prev {
+        top: 30%;
+      }
 
     .navbar a {
         font-size: 1.1rem;
@@ -223,6 +377,20 @@ p {
 
     .navbar ul {
         display: block;
+    }
+
+    .img-slider {
+        flex-direction: column;
+    }
+
+    .slide {
+        flex-direction: column;
+    }
+
+    .img-container,
+    .info-text {
+        flex: 0 0 100%;
+        width: 100%;
     }
 
 }
