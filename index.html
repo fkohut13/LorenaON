@@ -13,19 +13,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
-    <script src="index.js"></script>
+
 </head>
 
 <body>
     <!--Main content of the page-->
     <div class="main-content">
-        <header class="header">
+        <header class="header" id="header">
             <!--Logo of webpage-->
             <div class="logo-container">
                 <a class="logo" href="./index.html">
@@ -41,13 +42,13 @@
 
             <!--Open threebar button-->
             <a class="threebar-icon" onclick=showSidebar() href="#"><i class="fa-solid fa-bars"></i></a>
-            <nav class="navbar">
+            <nav class="navbar .hidden-nav">
                 <!--Unordered list with items of the navbar, such as: home, realstate, about us, contact and svgs-->
                 <ul class="navbar-menu-items">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="./index.html">Home</a></li>
                     <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Imóveis</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="./imoveis.html">Imóveis</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
                 </ul>
             </nav>
             <!--Responsive sidebar-->
@@ -55,81 +56,233 @@
                 <!--Close button-->
                 <a class="closebtn" onclick=closeSidebar()><i class="fa-solid fa-x"></i></a>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="./index.html">Home</a></li>
                     <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Imóveis</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="/imoveis.html">Imóveis</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
                 </ul>
             </div>
         </header>
         <!--Introduction text and "meet us" button-->
         <div class="introduction-text">
-            <h1>LORENA ON</h1>
+            <div class="logo">
+                <div class="title">LORENA</div>
+                <div class="box">
+                    <div class="on">ON</div>
+                </div>
+
+            </div>
+
+
+
+
             <p id="slogan">Aluguel por temporada sempre ON</p>
-            <div class="meet-btn" onclick="scrollmeetbtn('container')">
+            <div class="meet-btn" onclick="scrollmeetbtn('scrollto')">
                 <a href="#">VENHA CONHECER</a>
+            </div>
+        </div>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://api.whatsapp.com/send?phone=554191250182&text=Ola!%20gostaria%20de%20mais%20informações%20sobre%20LorenaON."
+            class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
+
+    </div>
+    <div class="meet-us-container">
+        <div class="meet-us-content">
+            <img class="hidden-img" src="./assets/images/Lorenabanner.jpg" alt="">
+            <a class="hidden-img" href="./assets/images/Lorenabanner.jpg"><i class="fa-solid fa-expand"></i></a>
+            <div id="scrollto" class="meet-us-text">
+                <h1 class="hidden-txt">LORENA ON!</h1>
+                <h2 class="hidden-txt">São Paulo</h2>
+                <p class="hidden-txt">Jardim Paulista</p>
+
+                <ul class="hidden-txt">
+                    <li>
+                        <p class="title">16 e 21m²</p>
+                        <p>Lorem Ipsum connet param</p>
+                    </li>
+                    <li>
+                        <p class="title">Smart Store</p>
+                        <p>Lorem Ipsum connet param</p>
+                    </li>
+                    <li>
+                        <p class="title">16 e 21m²</p>
+                        <p>Lorem Ipsum connet param</p>
+                    </li>
+                    <li>
+                        <p class="title">16 e 21m²</p>
+                        <p>Lorem Ipsum connet param</p>
+                    </li>
+                </ul>
+
+
             </div>
         </div>
 
     </div>
+    <p class="slider-title">Áreas de lazer</p>
     <div class="img-slider">
         <div class="slide fade">
-            <div class="img-container">
-                <div class="numbertext">1 / 3</div>
-                <img src="./assets/images/Pool.jpg" alt="">
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                
-            </div>
+            <div class="content-overlay"></div>
+            <img class="content-image" src="./assets/images/Pool.webp" alt="">
             <div class="info-text">
                 <h2>Piscina</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Mauris sed nisl at sem malesuada ultricies. Suspendisse
-                    potenti. Vestibulum ante ipsum primis in faucibus or
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
                 </p>
             </div>
-            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <div class="slide fade">
-            <div class="img-container">
-                <div class="numbertext">2 / 3</div>
-                <img src="./assets/images/Gym.jpg" alt="">
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                
-            </div>
+            <div class="content-overlay"></div>
+            <img class="content-image" src="./assets/images/Gym.webp" alt="">
             <div class="info-text">
                 <h2>Academia</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Mauris sed nisl at sem malesuada ultricies. Suspendisse
-                    potenti. Vestibulum ante ipsum primis in faucibus or
                 </p>
             </div>
-           
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <div class="slide fade">
-            <div class="img-container">
-                <div class="numbertext">3 / 3</div>
-                <img src="./assets/images/Publicroom.jpg" alt="">
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
+            <div class="content-overlay"></div>
+            <img class="content-image" src="./assets/images/Publicroom.webp" alt="">
             <div class="info-text">
-                <h2>Quarto</h2>
+                <h2>Room</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Mauris sed nisl at sem malesuada ultricies. Suspendisse
-                    potenti. Vestibulum ante ipsum primis in faucibus or
+
                 </p>
             </div>
-           
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        
     </div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="./assets/images/blueroom.jpg" onclick="openModal(this)">
+        </div>
+        <div class="grid-item">
+            <img src="./assets/images/pinkroom.jpg" onclick="openModal(this)">
+        </div>
+        <div class="grid-item">
+            <img src="./assets/images/blueroom.jpg" onclick="openModal(this)">
+        </div>
+        <div class="grid-item">
+            <img src="./assets/images/blueroom.jpg" onclick="openModal(this)">
+        </div>
+        <div class="grid-item">
+            <img src="./assets/images/blueroom.jpg" onclick="openModal(this)">
+        </div>
+        <div class="grid-item">
+            <img src="./assets/images/blueroom.jpg" onclick="openModal(this)">
+        </div>
+        <div class="grid-item">
+            <img src="./assets/images/blueroom.jpg" onclick="openModal(this)">
+        </div>
+        <div class="grid-item">
+            <img src="./assets/images/blueroom.jpg" onclick="openModal(this)">
+        </div>
+
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-fullscreen">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+            <a class="prev" onclick="prevImage()">&#10094;</a>
+            <a class="next" onclick="nextImage()">&#10095;</a>
+        </div>
+    </div>
+
+
     <br>
-    
+
+    <div class="contact section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 offset-lg-4">
+                    <div class="section-heading text-center">
+                        <h3>
+                            Localização
+                        </h3>
+                        <p>Alameda Lorena, 718 - Jardim Paulista, São Paulo - SP</p>
+                        <div onclick=togglemap() class="show-map-btn">
+                            <button class="map-btn"><span>Mostrar Mapa <i
+                                        class="fa-solid fa-location-dot"></i></span></button>
+                        </div>
+                        <div id="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.3978370295936!2d-46.661642554674444!3d-23.56879669698742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5900f496d81f%3A0x44c65a45a7958db4!2sVitacon%20ON%20Lorena!5e0!3m2!1sen!2sbr!4v1707480206086!5m2!1sen!2sbr"
+                                width="600" height="450" style="border:0;" allowfullscreen="true" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="main-footer">
+        <ul class="social-icons">
+            <li><a class="whatsapp" href="#"><i class="fa fa-whatsapp"></i></a></li>
+            <li><a class="email" href="#"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+        <hr>
+
+        <div class="footer-buttons">
+            <div class="logo-container">
+                <div class="footer-content-buttons">
+                    <a class="logo" href="./index.html">
+                        <div class="logo">
+                            <div class="letter">LORENA</div>
+                            <div class="box">
+                                <div class="on">ON</div>
+                            </div>
+                        </div>
+                        <div class="topbtn">
+                            <a onclick="scrolltop('header')">
+                                <i class="fa-solid fa-circle-up"></i>
+                            </a>
+                            <p>Topo</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="footer-content">
+                    <div class="text">
+                        <h6>Sobre</h6>
+                        <p>
+                            Bem-vindo ao LorenaOn, a sua porta de entrada para uma experiência única de moradia em São
+                            Paulo.
+                            Localizados estrategicamente nas proximidades da deslumbrante Avenida Paulista, nossos
+                            studios
+                            oferecem
+                            o equilíbrio perfeito entre conforto, conveniência e estilo de vida cosmopolita.
+                        </p>
+                    </div>
+                    <div class="link-content">
+                        <h6>Links</h6>
+                        <a href="#">Sobre Nós</a>
+                        <a href="./imoveis.html">imóveis</a>
+                        <a href="./contato.html">Contato</a>
+                        <a>Politica de Privacidade</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 LorenaON - Criação e desenvolvimento Fabiano Kohut</p>
+
+        </div>
+    </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>
