@@ -25,7 +25,7 @@ p {
 }
 
 body {
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
 hr {
@@ -367,6 +367,7 @@ hr {
     display: none;
     position: relative;
     width: 90%;
+    height: 85vh;
     max-width: 850px;
     margin: auto;
     overflow: hidden;
@@ -503,13 +504,6 @@ hr {
     width: 100%;
 }
 
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
 
 @keyframes fade {
     from {
@@ -556,6 +550,10 @@ hr {
         display: inline-flex;
     }
 
+    .footer-buttons .logo-container {
+        min-width: 90%;
+    }
+
     .navbar {
         position: absolute;
         top: 100%;
@@ -576,11 +574,7 @@ hr {
         right: 0%;
     }
 
-    .next,
-    .prev {
-        top: 30%;
-    }
-
+    
     .meet-us-container .meet-us-content {
         display: flex;
         flex-direction: column-reverse;
@@ -610,10 +604,7 @@ hr {
         flex-direction: column;
     }
 
-    .slide {
-        flex-direction: column;
-    }
-
+ 
 
 
     .contact-form .inputbox input:focus~span,
@@ -648,11 +639,14 @@ hr {
     gap: 20px;
     height: 100%;
 }
+
 .grid-container .grid-item {
     width: 300px;
-    height: 100%;
+    min-height: 100%;
+    height: 30vh;
     display: flex;
-    align-items: stretch; 
+    align-items: stretch;
+    overflow: hidden;
 }
 
 .grid-container .grid-item img {
@@ -661,7 +655,16 @@ hr {
     max-width: 300px;
     max-height: 30vh;
     cursor: pointer;
+    transition: all .5s ease;
 }
+.grid-container .grid-item img:hover {
+    transform: scale(1.2);
+    transform-origin: 50% 50%;
+}
+.load-more-checkbox {
+    display: none;
+}
+
 
 .modal-content {
     max-width: 100%;
@@ -671,6 +674,7 @@ hr {
     overflow: hidden;
 
 }
+
 .modal-fullscreen {
     width: 100%;
     height: 100%;
@@ -678,6 +682,7 @@ hr {
     align-items: center;
     justify-content: center;
 }
+
 .modal {
     display: none;
     position: fixed;
@@ -744,6 +749,7 @@ hr {
 
 .main-footer {
     background-color: black;
+    margin-top: -10px;
 }
 
 .main-footer .copyright {
@@ -764,13 +770,13 @@ button {
     margin: 20px;
 }
 
-.map-btn {
+.bluebtn {
     width: 130px;
     height: 40px;
     color: #fff;
     border-radius: 5px;
     padding: 10px 25px;
-    font-family: 'ralewa', sans-serif;
+    font-family: '', sans-serif;
     font-weight: 500;
     background: transparent;
     cursor: pointer;
@@ -781,7 +787,7 @@ button {
 
 }
 
-.map-btn {
+.bluebtn {
     background: rgba(65, 105, 255);
     width: 130px;
     height: 40px;
@@ -791,19 +797,19 @@ button {
 
 }
 
-.map-btn span {
+.bluebtn span {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.map-btn span i {
+.bluebtn span i {
     color: red;
 }
 
-.map-btn:before,
-.map-btn:after {
+.bluebtn:before,
+.bluebtn:after {
     position: absolute;
     content: "";
     right: 0;
@@ -812,36 +818,36 @@ button {
     transition: all 0.3s ease;
 }
 
-.map-btn:before {
+.bluebtn:before {
     height: 0%;
     width: 2px;
 }
 
-.map-btn:after {
+.bluebtn:after {
     width: 0%;
     height: 2px;
 }
 
-.map-btn:hover {
+.bluebtn:hover {
     background: transparent;
     box-shadow: none;
 
 }
 
-.map-btn:hover:before {
+.bluebtn:hover:before {
     height: 100%;
 }
 
-.map-btn:hover:after {
+.bluebtn:hover:after {
     width: 100%;
 }
 
-.map-btn span:hover {
+.bluebtn span:hover {
     color: rgba(2, 126, 251, 1);
 }
 
-.map-btn span:before,
-.map-btn span:after {
+.bluebtn span:before,
+.bluebtn span:after {
     position: absolute;
     content: "";
     left: 0;
@@ -850,21 +856,21 @@ button {
     transition: all 0.3s ease;
 }
 
-.map-btn span:before {
+.bluebtn span:before {
     width: 2px;
     height: 0%;
 }
 
-.map-btn span:after {
+.bluebtn span:after {
     width: 0%;
     height: 2px;
 }
 
-.map-btn span:hover:before {
+.bluebtn span:hover:before {
     height: 100%;
 }
 
-.map-btn span:hover:after {
+.bluebtn span:hover:after {
     width: 100%;
 }
 
@@ -892,7 +898,7 @@ button {
 
 .text p {
     font-size: 13px;
-    color: gray;
+    color: #fff;
 }
 
 .footer-content {
@@ -990,7 +996,11 @@ button {
 }
 
 .social-icons a.email:hover {
-    background-color: darkred;
+    background-color: red;
+}
+
+.social-icons a.airbnb:hover {
+    background-color: #FF5A5F;
 }
 
 .social-icons.size-sm a {
@@ -1176,6 +1186,9 @@ button {
 }
 
 .container-grid .filter_buttons a {
+    font-family:  "Roboto", sans-serif;
+    
+
     padding: 10px 20px;
     font-size: 18px;
     border: none;
@@ -1194,7 +1207,7 @@ button {
     gap: 10px;
 }
 
-.container-grid a:hover {
+.container-grid .filter-btn:hover {
     background: #ddd;
 }
 
@@ -1211,6 +1224,47 @@ button {
 
 }
 
+.filterable_cards .card-item a {
+    cursor: pointer;
+    margin-left: 15px;
+}
+.filterable_cards .card-item .img-link-page {
+    margin: 0;
+}
+
+.filterable_cards .card-item a i {
+    font-size: 25px;
+}
+
+.filterable_cards .card-item a .fa-whatsapp {
+    font-weight: lighter;
+}
+
+.filterable_cards .card-item a .fa-whatsapp:hover {
+    color: #25D366;
+    transition: 0.5s ease;
+}
+
+.filterable_cards .card-item a .fa-airbnb:hover {
+    color: #FF5A5F;
+    transition: 0.5s ease;
+}
+
+.filterable_cards .card-item a .fa-airbnb {
+    font-weight: lighter;
+}
+
+.filterable_cards .card-item .img-header-icons {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    color: #fff;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    z-index: 2;
+    justify-content: flex-end;
+}
+
 .filterable_cards .card-item {
     display: block;
     flex-basis: 400px;
@@ -1218,6 +1272,7 @@ button {
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     overflow: hidden;
+    position: relative;
 }
 
 .filterable_cards .card-item.show {
@@ -1377,7 +1432,6 @@ button {
 .hidden-txt {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(100%);
     transition: all 1.5s;
 }
 
@@ -1407,4 +1461,243 @@ button {
 .introduction-text .logo .box {
     margin-bottom: 10px;
     margin-top: -25px;
+}
+
+
+/*Room page section*/
+.room-content h1{
+    color: #000000;
+    font-size: 34px;
+    padding-left: 55px;
+    margin-top: 20px;
+    font-family:  "Roboto", sans-serif;
+    
+}
+.room-slider {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 40px;
+    
+}
+
+
+.room-slider .room-img img{
+    box-sizing: border-box;
+    width: 100%;
+    max-height: 100%;
+
+    
+
+}
+.room-content-info{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.room-slider .room-img {
+    max-width: 67%;
+    margin: 0;
+    position: relative;
+    border-radius: 2%;
+    height: 485px;
+}
+
+
+.room-captiontxt {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    color: #fff;
+    font-size: 25px;
+    padding: 8px 12px;
+    top: 0;
+    height: fit-content;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    
+}
+
+.numbertext {
+    color: #fff;
+    font-size: 22px;
+    padding: 8px 16px;
+    position: absolute;
+ 
+    top: 10px;
+    left: 10px;
+    border-radius: 10%;
+    
+   
+
+}
+.room-slider .room-info {
+    background-color: #FFF;
+    border: solid 1px #ddd;
+    border-radius: 4%;
+    flex: 0 0 28%;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.16);
+    margin-left: 30px;
+
+    
+
+    
+}
+.room-slider .room-content-info {
+    margin: 6px 20px 100px 20px;
+    width: 100%;
+}
+.room-slider .room-info h2{
+    font-family: raleway;
+    color: #000000;
+    text-align: center;
+    margin: 20px 0px;
+}
+.room-info .price {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 500;
+    font-family: teko;
+}
+
+.room-features-list{
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row nowrap;
+}
+.room-features-list ul {
+    max-width: 50%;
+}
+.room-features-list ul li {
+    color: #000000;
+    padding: 7px;
+}
+.available-btn {
+    text-align: center;
+    bottom: 0;
+    max-width: 100%;
+}
+.room-info .social-icons a.whatsapp{
+    background-color: #25d366;
+    color: #fff;
+}
+.room-info .social-icons a.airbnb{
+    background-color: #FF5A5F;
+    color: #fff;
+}
+
+.room-content .aboutroom p{
+    color: #000000;
+}
+#check{
+    display: none;
+    color: #237FD0;
+    font-family: 'raleway', 'sans-serif';;
+}
+.p-text-content {
+    display: none;
+    transition: 0.5 linear;
+}
+.aboutroom label{
+    display: inline-block;
+    margin-top: 15px;
+    color: royalblue;
+  
+    cursor: pointer;
+    font-weight: 600;
+}
+#check:checked ~ .p-text-content{
+    display: block;
+
+}
+#check:checked ~ label{
+    visibility: hidden;
+}
+#check:checked ~ label::after {
+    content: "Mostrar Menos";
+    display: flex;
+    visibility: visible;
+}
+.aboutroom {
+    align-self: start;
+    justify-self: unset;
+    width: 70%;
+    margin-top: 40px;
+
+}
+.aboutroom h3 {
+    font-size: 30px;
+    font-family: 'raleway', 'sans-serif';
+}
+.aboutroom p{
+    font-family: 'raleway', 'sans-serif';
+    margin: 0;
+}
+.aboutroom h3{
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px){
+    .room-content-info {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .room-slider .room-img {
+        margin-bottom: 10px;
+        max-width: 100%;
+    }
+    .room-slider .room-info { 
+        margin: 0;
+    }
+    
+    .room-slider .room-img img {
+        height: 100%;
+        width: 100%;
+    }
+    .room-slider {
+        width: 100%;
+        margin: 0;
+    }
+    .aboutroom {
+        width: 100%;
+        text-align: center;
+    }
+    .load-grid-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .load-more-checkbox {
+        display: none;
+    }
+     .grid-item:nth-child(1n +6) {
+        opacity: 0;
+        transition: 0.2s ease-in;
+        max-height: 0;
+    }
+    .load-more-button {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #3498db;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    #loadMoreToggle:checked ~ .grid-item:nth-child(1n + 5){
+        max-height: 100%;
+        opacity: 1;
+    
+    }
+    
+    .load-more-button::before {
+        content: "Load More";
+    }
+    
+    
+    .load-more-button:hover {
+        background-color: #2980b9;
+    }
+    
 }

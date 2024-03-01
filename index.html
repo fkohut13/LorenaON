@@ -93,11 +93,11 @@
             <img class="hidden-img" src="./assets/images/Lorenabanner.jpg" alt="">
             <a class="hidden-img" href="./assets/images/Lorenabanner.jpg"><i class="fa-solid fa-expand"></i></a>
             <div id="scrollto" class="meet-us-text">
-                <h1 class="hidden-txt">LORENA ON!</h1>
-                <h2 class="hidden-txt">São Paulo</h2>
-                <p class="hidden-txt">Jardim Paulista</p>
+                <h1>LORENA ON!</h1>
+                <h2>São Paulo</h2>
+                <p>Jardim Paulista</p>
 
-                <ul class="hidden-txt">
+                <ul>
                     <li>
                         <p class="title">16 e 21m²</p>
                         <p>Lorem Ipsum connet param</p>
@@ -107,11 +107,11 @@
                         <p>Lorem Ipsum connet param</p>
                     </li>
                     <li>
-                        <p class="title">16 e 21m²</p>
+                        <p class="title">Lorem</p>
                         <p>Lorem Ipsum connet param</p>
                     </li>
                     <li>
-                        <p class="title">16 e 21m²</p>
+                        <p class="title">Lorem</p>
                         <p>Lorem Ipsum connet param</p>
                     </li>
                 </ul>
@@ -121,7 +121,7 @@
         </div>
 
     </div>
-    <p class="slider-title">Áreas de lazer</p>
+    <p class="slider-title">Principais áreas de lazer</p>
     <div class="img-slider">
         <div class="slide fade">
             <div class="content-overlay"></div>
@@ -150,9 +150,9 @@
         </div>
         <div class="slide fade">
             <div class="content-overlay"></div>
-            <img class="content-image" src="./assets/images/Publicroom.webp" alt="">
+            <img class="content-image" src="./assets/images/Cokitchen.jpeg" alt="">
             <div class="info-text">
-                <h2>Room</h2>
+                <h2>Cokitchen</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
@@ -162,33 +162,42 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
     </div>
+    <p class="slider-title">Áreas comuns</p>
+    
     <div class="grid-container">
+          <input type="checkbox" id="loadMoreToggle" class="load-more-checkbox">
         <div class="grid-item">
-            <img src="./assets/images/blueroom.jpg" onclick="openModal(this)">
+            <img src="./assets/images/Terraço.jpeg" onclick="openModal(this)">
         </div>
         <div class="grid-item">
-            <img src="./assets/images/pinkroom.jpg" onclick="openModal(this)">
+            <img src="./assets/images/Terraço2.webp" onclick="openModal(this)">
         </div>
         <div class="grid-item">
-            <img src="./assets/images/blueroom.jpg" onclick="openModal(this)">
+            <img src="./assets/images/Bar.webp" onclick="openModal(this)">
         </div>
         <div class="grid-item">
-            <img src="./assets/images/blueroom.jpg" onclick="openModal(this)">
+            <img src="./assets/images/Chill.jpeg" onclick="openModal(this)">
         </div>
-        <div class="grid-item">
-            <img src="./assets/images/blueroom.jpg" onclick="openModal(this)">
+        <div class="grid-item" id="hidegridimg">
+            <img src="./assets/images/Publicroom.webp" onclick="openModal(this)">
         </div>
-        <div class="grid-item">
-            <img src="./assets/images/blueroom.jpg" onclick="openModal(this)">
+        <div class="grid-item hidegridimg">
+            <img src="./assets/images/Smartbreak.png" onclick="openModal(this)">
         </div>
-        <div class="grid-item">
-            <img src="./assets/images/blueroom.jpg" onclick="openModal(this)">
+        <div class="grid-item hidegridimg">
+            <img src="./assets/images/Publcroom2.webp" onclick="openModal(this)">
         </div>
-        <div class="grid-item">
-            <img src="./assets/images/blueroom.jpg" onclick="openModal(this)">
+        <div class="grid-item hidegridimg">
+            <img src="./assets/images/Gym2.webp" onclick="openModal(this)">
         </div>
-
+        <div class="grid-item hidegridimg">
+            <img src="./assets/images/Wash.jpeg" onclick="openModal(this)">
+        </div>
     </div>
+    <div class="load-grid-toggle">
+        <label for="loadMoreToggle" class="load-more-button"></label>
+    </div>
+        
     <div id="myModal" class="modal">
         <div class="modal-fullscreen">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -212,7 +221,7 @@
                         </h3>
                         <p>Alameda Lorena, 718 - Jardim Paulista, São Paulo - SP</p>
                         <div onclick=togglemap() class="show-map-btn">
-                            <button class="map-btn"><span>Mostrar Mapa <i
+                            <button class="map bluebtn"><span>Mostrar Mapa <i
                                         class="fa-solid fa-location-dot"></i></span></button>
                         </div>
                         <div id="map">
@@ -232,8 +241,11 @@
 
     <footer class="main-footer">
         <ul class="social-icons">
-            <li><a class="whatsapp" href="#"><i class="fa fa-whatsapp"></i></a></li>
-            <li><a class="email" href="#"><i class="fa fa-envelope"></i></a></li>
+            <li><a class="whatsapp"
+                    href="https://api.whatsapp.com/send?phone=554191250182&text=Ola!%20gostaria%20de%20mais%20informações%20sobre%20LorenaON."><i
+                        class="fa fa-whatsapp"></i></a></li>
+            <li><a class="email" href="./contato.html"><i class="fa fa-envelope"></i></a></li>
+            <li><a class="airbnb" href="#"><i class="fa-brands fa-airbnb"></i></a></li>
         </ul>
         <hr>
 

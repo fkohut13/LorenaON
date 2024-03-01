@@ -23,11 +23,11 @@
 </head>
 
 <body class="imoveis-body">
-  
-  
+
+
   <!--Main content of the page-->
   <header class="header" id="header">
-    
+
     <!--Logo of webpage-->
     <div class="logo-container">
       <a class="logo" href="./index.html">
@@ -63,59 +63,82 @@
         <li><a href="./contato.html">Contato</a></li>
       </ul>
     </div>
-    
+
   </header>
 
 
-  
+
 
   <div class="container-grid">
     <!-- Images Filter Buttons Section -->
     <div class="filter_buttons">
-      <a class="filter-btn active" data-filter="all">Mostrar Tudo</a>
-      <a class="filter-btn" data-filter="white">Branco</a>
-      <a class="filter-btn" data-filter="blue">Azul</a>
-      <a class="filter-btn" data-filter="pink">Rosa</a>
+      <a class="filter-btn active" data-filter="all">Mostrar Tudos</a>
+      <a class="filter-btn" data-filter="nb">16m²</a>
+      <a class="filter-btn" data-filter="wb">21m²</a>
     </div>
     <!-- Filterable Images / Cards Section -->
     <div class="filterable_cards">
-      <div class="card-item blue">
-        <img class="card-img" onclick="fullscreenslider('./assets/images/blueroom.jpg')" src="./assets/images/blueroom.jpg">
+      <div class="card-item nb">
+        <div class="img-header-icons">
+          <a href="#"><i class="fa-brands fa-airbnb"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <a class="img-link-page" href="./Quartos/1108.html"><img class="card-img" src="./assets/images/Studios/1108.jpg"></a>
+        <div class="card_body">
+          <a href="./Quartos/1108.html"><h6 class="card_title">1108</h6></a>
+          <p class="card_text">Lorem Ipsum dolor</p>
+        </div>
+      </div>
+      <div class="card-item nb">
+        <div class="img-header-icons">
+          <a><i class="fa-brands fa-airbnb"></i></a>
+          <a><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <a class="img-link-page" href="./Quartos/1208.html"><img class="card-img" src="./assets/images/Studios/1208.jpg"></a>
+        <div class="card_body">
+          <h6 class="card_title">1208</h6>
+          <p class="card_text">Lorem Ipsum dolor</p>
+        </div>
+      </div>
+      <div class="card-item wb">
+        <div class="img-header-icons">
+          <a><i class="fa-brands fa-airbnb"></i></a>
+          <a><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <a class="img-link-page" href="./Quartos/1209.html"><img class="card-img" src="./assets/images/Studios/1209.jpg"></a>
+        <div class="card_body">
+          <h6 class="card_title">1209</h6>
+          <p class="card_text">Lorem Ipsum dolor</p>
+        </div>
+      </div>
+      <div class="card-item #">
+        <div class="img-header-icons">
+          <a><i class="fa-brands fa-airbnb"></i></a>
+          <a><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <a class="img-link-page" href="./Quartos/1109.html"><img class="card-img" src="./assets/images/blueroom.jpg"></a>
         <div class="card_body">
           <h6 class="card_title">1109</h6>
           <p class="card_text">Lorem Ipsum dolor</p>
         </div>
       </div>
-      <div class="card-item blue">
-        <img class="card-img" onclick="fullscreenslider('./assets/images/blueroom.jpg')" src="./assets/images/blueroom.jpg">
-        <div class="card_body">
-          <h6 class="card_title">1109</h6>
-          <p class="card_text">Lorem Ipsum dolor</p>
+      <div class="card-item #">
+        <div class="img-header-icons">
+          <a><i class="fa-brands fa-airbnb"></i></a>
+          <a><i class="fa-brands fa-whatsapp"></i></a>
         </div>
-      </div>
-      <div class="card-item blue">
-        <img class="card-img" onclick="fullscreenslider('./assets/images/blueroom.jpg')" src="./assets/images/blueroom.jpg">
-        <div class="card_body">
-          <h6 class="card_title">1109</h6>
-          <p class="card_text">Lorem Ipsum dolor</p>
-        </div>
-      </div>
-      <div class="card-item blue">
-        <img class="card-img" onclick="fullscreenslider('./assets/images/blueroom.jpg')" src="./assets/images/blueroom.jpg">
-        <div class="card_body">
-          <h6 class="card_title">1109</h6>
-          <p class="card_text">Lorem Ipsum dolor</p>
-        </div>
-      </div>
-      <div class="card-item pink">
-        <img class="card-img" onclick="fullscreenslider('./assets/images/pinkroom.jpg')" src="./assets/images/pinkroom.jpg">
+        <a class="img-link-page" href="./Quartos/1110.html"><img class="card-img" src="./assets/images/pinkroom.jpg"></a>
         <div class="card_body">
           <h6 class="card_title">1110</h6>
           <p class="card_text">Lorem Ipsum dolor</p>
         </div>
       </div>
-      <div class="card-item white">
-        <img class="card-img" onclick="fullscreenslider('./assets/images/white.jpg')" src="./assets/images/white.jpg">
+      <div class="card-item wb">
+        <div class="img-header-icons">
+          <a><i class="fa-brands fa-airbnb"></i></a>
+          <a><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <a class="img-link-page" href="./Quartos/1101.html"><img class="card-img" src="./assets/images/white.jpg"></a>
         <div class="card_body">
           <h6 class="card_title">1101</h6>
           <p class="card_text">Lorem Ipsum dolor
@@ -127,78 +150,78 @@
 
     </div>
   </div>
-<div id="fsc" class="fullscreen-slider-container">
-  <div id="fis" class="fullscreen-img-slider">
-    <div class="slider--content">
-      <button class="slider__btn-left">
-        <i class="fas fa-angle-left"></i>
-      </button>
-      <div class="slider--feature">
-        <a id="closeslider" onclick=closeslider()><i class="fa-solid fa-x"></i></a>
+  <div id="fsc" class="fullscreen-slider-container">
+    <div id="fis" class="fullscreen-img-slider">
+      <div class="slider--content">
+        <button class="slider__btn-left">
+          <i class="fas fa-angle-left"></i>
+        </button>
+        <div class="slider--feature">
+          <a id="closeslider" onclick=closeslider()><i class="fa-solid fa-x"></i></a>
+        </div>
+        <button class="slider__btn-right">
+          <i class="fas fa-angle-right"></i>
+        </button>
       </div>
-      <button class="slider__btn-right">
-        <i class="fas fa-angle-right"></i>
-      </button>
     </div>
   </div>
-</div>
 
 
 
 
 
-<footer class="main-footer">
-  <ul class="social-icons">
-      <li><a class="whatsapp" href="#"><i class="fa fa-whatsapp"></i></a></li>
+  <footer class="main-footer">
+    <ul class="social-icons">
+      <li><a class="whatsapp" href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
       <li><a class="email" href="#"><i class="fa fa-envelope"></i></a></li>
-  </ul>
-  <hr>
+    </ul>
+    <hr>
 
-  <div class="footer-buttons">
+    <div class="footer-buttons">
       <div class="logo-container">
-          <div class="footer-content-buttons">
-              <a class="logo" href="./index.html">
-                  <div class="logo">
-                      <div class="letter">LORENA</div>
-                      <div class="box">
-                          <div class="on">ON</div>
-                      </div>
-                  </div>
-                  <div class="topbtn">
-                      <a onclick="scrolltop('header')">
-                          <i class="fa-solid fa-circle-up"></i>
-                      </a>
-                      <p>Topo</p>
-                  </div>
+        <div class="footer-content-buttons">
+          <a class="logo" href="./index.html">
+            <div class="logo">
+              <div class="letter">LORENA</div>
+              <div class="box">
+                <div class="on">ON</div>
+              </div>
+            </div>
+            <div class="topbtn">
+              <a onclick="scrolltop('header')">
+                <i class="fa-solid fa-circle-up"></i>
               </a>
+              <p>Topo</p>
+            </div>
+          </a>
+        </div>
+        <div class="footer-content">
+          <div class="text">
+            <h6>Sobre</h6>
+            <p>
+              Bem-vindo ao LorenaOn, a sua porta de entrada para uma experiência única de moradia em São
+              Paulo.
+              Localizados estrategicamente nas proximidades da deslumbrante Avenida Paulista, nossos
+              studios
+              oferecem
+              o equilíbrio perfeito entre conforto, conveniência e estilo de vida cosmopolita.
+            </p>
           </div>
-          <div class="footer-content">
-              <div class="text">
-                  <h6>Sobre</h6>
-                  <p>
-                      Bem-vindo ao LorenaOn, a sua porta de entrada para uma experiência única de moradia em São
-                      Paulo.
-                      Localizados estrategicamente nas proximidades da deslumbrante Avenida Paulista, nossos
-                      studios
-                      oferecem
-                      o equilíbrio perfeito entre conforto, conveniência e estilo de vida cosmopolita.
-                  </p>
-              </div>
-              <div class="link-content">
-                  <h6>Links</h6>
-                  <a href="#">Sobre Nós</a>
-                  <a href="./imoveis.html">imóveis</a>
-                  <a href="./contato.html">Contato</a>
-                  <a>Politica de Privacidade</a>
-              </div>
+          <div class="link-content">
+            <h6>Links</h6>
+            <a href="#">Sobre Nós</a>
+            <a href="./imoveis.html">imóveis</a>
+            <a href="./contato.html">Contato</a>
+            <a>Politica de Privacidade</a>
           </div>
+        </div>
       </div>
-  </div>
-  <div class="copyright">
+    </div>
+    <div class="copyright">
       <p>© 2024 LorenaON - Criação e desenvolvimento Fabiano Kohut</p>
 
-  </div>
-</footer>
+    </div>
+  </footer>
 </body>
 
 

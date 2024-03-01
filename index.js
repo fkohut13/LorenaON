@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   closeBtn.addEventListener('click', closeSidebar);
   openBtn.addEventListener('click', showSidebar);
 
+
   const btnLeft = document.querySelector(".slider__btn-left");
   const btnRight = document.querySelector(".slider__btn-right");
   if (btnLeft) {
@@ -19,19 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
   if (closesliderbtn) {
     closesliderbtn.addEventListener('click', closeslider);
   }
-
-
-
-  let scrValue;
+  
 
   const cardimage = document.getElementsByClassName("card-img");
 
-  for (var i = 0; i < cardimage.length; i++) {
-    cardimage[i].addEventListener('click', function () {
-      scrValue = this.getAttribute('src');
-      fullscreenslider(scrValue);
-    });
-  }
 
   const hiddentext = document.querySelectorAll('.hidden-txt');
   const hiddenimgs = document.querySelectorAll('.hidden-img');
@@ -75,6 +67,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  
 
 });
 
@@ -140,46 +134,12 @@ function togglemap() {
 
 
 }
-// if (elem.value=="Close Curtain") elem.value = "Open Curtain";
-//else elem.value = "Close Curtain";
-let images = [
-  './assets/images/default.jpg',
-  './assets/images/default1.jpg'
-];
-let currentindex = 0;
-function fullscreenslider(scrValue) {
-  const fullscreenslidercontainer = document.querySelector("#fsc");
-  const fullscreenimgslider = document.querySelector("#fis");
-  fullscreenslidercontainer.classList.add("active");
-  fullscreenslidercontainer.style.display = 'block';
-  fullscreenimgslider.style.backgroundImage = 'url("' + scrValue + '")';
-  if (!images.includes(scrValue)) {
-    images.push(scrValue);
-  }
-
-}
-function closeslider() {
-  const fullscreenslidercontainer = document.querySelector("#fsc");
-  fullscreenslidercontainer.classList.remove('active');
-  fullscreenslidercontainer.style.display = 'none';
-  images = [
-    './assets/images/default.jpg',
-    './assets/images/default1.jpg'
-  ];
-}
-
-function changesliderimage(direction) {
-  const fullscreenimgslider = document.querySelector("#fis");
-  currentindex = (currentindex + direction + images.length) % images.length;
-  fullscreenslider(images[currentindex]);
-
-
-}
 
 let modal = document.getElementById("myModal");
 let modalImg = document.getElementById("modalImage");
 let captionText = document.getElementById("caption");
 let currentIndex = 0;
+
 
 function openModal(img) {
   modal.style.display = "block";
@@ -215,7 +175,6 @@ function updateModalImage() {
   modalImg.src = images[currentIndex].src;
   captionText.innerHTML = images[currentIndex].alt;
 }
-
 
 
 
